@@ -3,7 +3,7 @@
 </script>
 <template>
     <nav>
-        <div id="icon">图标</div>
+        <div><img id="logo" src="/img/100_anniversary_logo.png" alt=""></div>
         <div id="link">
 
             <div class="links">主页</div>
@@ -19,7 +19,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 90px;
     width: 100%;
 
     display: flex;
@@ -27,7 +27,7 @@ nav {
     justify-content: space-between;
 
 
-    background-color: aquamarine;
+    background-color: #165BA4;
 }
 #link {
     display: flex;
@@ -36,5 +36,10 @@ nav {
 
 .links {
     margin: 5px;
+}
+
+#logo {
+    margin-left: 20px;
+    width: 80px;
 }
 </style>
