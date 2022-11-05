@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import Header from './components/Header.vue'
-import Main from './components/Main.vue'
+import FullPage from './components/FullPage.vue'
 </script>
 
 <template>
   <Header />
-  <Main />
+  <FullPage />
 </template>
 
 <style scoped>
