@@ -14,6 +14,8 @@
 </template>
 <style lang="less" scoped>
 nav {
+    z-index: 114514;
+
     position: fixed;
     top: 0;
     left: 0;
