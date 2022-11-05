@@ -14,7 +14,7 @@
 </template>
 <style lang="less" scoped>
 nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 50px;
