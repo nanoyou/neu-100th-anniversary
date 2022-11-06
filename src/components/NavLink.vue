@@ -44,15 +44,15 @@ function click(e: Event) {
 }
 .selected.link::after {
 
-        content: "";
-        height: 4px;
-        overflow: hidden;
-        display: block;
-        left: 0;
-        bottom: 0px;
-        position: absolute;
-        width: 100%;
-        background: #FBFBFB;
-        transform: scaleX(1);
-    }
+    content: "";
+    height: 4px;
+    overflow: hidden;
+    display: block;
+    left: 0;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    background: #FBFBFB;
+    transform: scaleX(1);
+}
 </style>
