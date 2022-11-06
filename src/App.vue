@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Header from './components/Header.vue'
-import FullPage from './components/FullPage.vue'
+import NavBar from './view/NavBar.vue'
+import FullPage from './view/FullPage.vue'
 </script>
 
 <template>
-  <Header />
+  <NavBar />
   <FullPage />
 </template>
 

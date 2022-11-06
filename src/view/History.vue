@@ -1,15 +1,23 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 
+
+const currentCard = ref()
 </script>
 <template>
     <div id="history">
-        <h1>草</h1>
+        <aside>
+            轴
+        </aside>
+        <main>
+            <component :is="currentCard" />
+        </main>
     </div>
 </template>
 <style lang="less" scoped>
 #history {
-    background-color: yellowgreen;
     height: 100%;
+    background-color: gray;
     
     display: flex;
     align-items: center;

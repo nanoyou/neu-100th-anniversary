@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { bus } from '../bus'
-import NavLink from './NavLink.vue'
+import NavLink from '../components/NavLink.vue'
 const links = reactive([
     {
         name: "百年校庆",
