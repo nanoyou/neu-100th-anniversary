@@ -20,10 +20,6 @@ const links = reactive([
         id: "",
         selected: false,
     }, {
-        name: "人文活动",
-        id: "",
-        selected: false,
-    }, {
         name: "科研成果",
         id: "",
         selected: false,
@@ -65,14 +61,14 @@ nav {
 }
 #link {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     flex: 1;
-    margin: 0 10vw 0 10vw;
+    margin-right: 8vw;
 }
 
 
 #logo {
-    margin-left: calc(10vw - 20px);
+    margin-left: calc(8vw - 20px);
     margin-top: 5px;
     width: 100px;
 }
