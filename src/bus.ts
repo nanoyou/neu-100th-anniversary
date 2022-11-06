@@ -18,4 +18,5 @@ class Bus {
         this.list.set(name, new Set([callback]))
     }
 }
-export default new Bus()
+const bus = new Bus()
+export { bus }

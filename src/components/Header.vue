@@ -1,14 +1,48 @@
 <script setup lang="ts">
-
+import { reactive } from 'vue'
+import { bus } from '../bus'
+import NavLink from './NavLink.vue'
+const links = reactive([
+    {
+        name: "百年校庆",
+        id: "main",
+        selected: true,
+    }, {
+        name: "东大历史",
+        id: "history",
+        selected: false,
+    }, {
+        name: "校园风采",
+        id: "",
+        selected: false,
+    }, {
+        name: "师生风貌",
+        id: "",
+        selected: false,
+    }, {
+        name: "人文活动",
+        id: "",
+        selected: false,
+    }, {
+        name: "科研成果",
+        id: "",
+        selected: false,
+    }, {
+        name: "要闻在线",
+        id: "",
+        selected: false,
+    }
+])
+bus.on('full-page-moved-to', (index: number) => {
+    links.forEach(link => link.selected = false)
+    links[index].selected = true
+})
 </script>
 <template>
     <nav>
-        <div><img id="logo" src="/img/100_anniversary_logo.png" alt=""></div>
+        <div><img id="logo" src="/img/neu_en_1_logo.png" alt=""></div>
         <div id="link">
-
-            <div class="links">主页</div>
-            <div class="links">历史</div>
-            <div class="links">师生</div>
+            <NavLink v-for="{name, id, selected} in links" :name="name" :id="id" :selected="selected" />
         </div>
     </nav>
 </template>
@@ -19,7 +53,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 90px;
+    height: 75px;
     width: 100%;
 
     display: flex;
@@ -27,19 +61,19 @@ nav {
     justify-content: space-between;
 
 
-    background-color: #165BA4;
+    background-color: #1F1A17;
 }
 #link {
     display: flex;
-
+    justify-content: space-between;
+    flex: 1;
+    margin: 0 10vw 0 10vw;
 }
 
-.links {
-    margin: 5px;
-}
 
 #logo {
-    margin-left: 20px;
-    width: 80px;
+    margin-left: calc(10vw - 20px);
+    margin-top: 5px;
+    width: 100px;
 }
 </style>

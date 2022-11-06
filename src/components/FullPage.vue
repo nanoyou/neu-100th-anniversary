@@ -2,7 +2,7 @@
 import Main from './Main.vue'
 import History from './History.vue'
 import { computed, onBeforeMount, onMounted, ref } from 'vue';
-import Bus from '../bus'
+import { bus } from '../bus'
 
 const fullPage = ref()
 const sections = computed(() => fullPage.value.querySelectorAll('section'))
@@ -21,6 +21,8 @@ function moveToPage(index: number) {
     const height = document.body.clientHeight * index
     fullPage.value.style.transform = `translateY(-${height}px)` 
     currentPage = index
+    bus.emit('full-page-moved-to', index)
+    
 
     setTimeout(() => {
         isScrolling = false
@@ -36,7 +38,6 @@ function moveToPageWithID(id: string) {
 }
 
 function next() {
-    console.log("next")
     if (currentPage + 1 >= sections.value.length) {
         return
     }
@@ -44,28 +45,24 @@ function next() {
 }
 
 function prev() {
-    console.log("prev")
     if (currentPage == 0) {
         return
     }
     moveToPage(currentPage - 1)
 }
-Bus.on('full-page-next', next)
-Bus.on('full-page-prev', prev)
-Bus.on('full-page-to', moveToPageWithID)
+bus.on('full-page-next', next)
+bus.on('full-page-prev', prev)
+bus.on('full-page-to', moveToPageWithID)
 
 function handler(event: any) {
-    console.log("handler")
     if (event.stopPropagation) {
         event.stopPropagation()
     } else {
         event.returnValue = false
     }
 
-    console.log(isScrolling)
     const e = event.originalEvent || event
     const deltaY = e.deltaY || e.detail
-    console.log(deltaY)
     if (deltaY > 0) {
         next()
     } else {
