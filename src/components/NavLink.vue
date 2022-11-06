@@ -35,8 +35,12 @@ function click(e: Event) {
     font-weight: bold;
     text-decoration: none;
     position: relative;
+    padding: 20px;
     
-    
+    &:hover {
+        background-color: rgb(60, 50, 46);
+        color: rgb(255, 116, 35);
+    }
 }
 .selected.link::after {
 
@@ -45,7 +49,7 @@ function click(e: Event) {
         overflow: hidden;
         display: block;
         left: 0;
-        bottom: -16px;
+        bottom: 0px;
         position: absolute;
         width: 100%;
         background: #FBFBFB;
