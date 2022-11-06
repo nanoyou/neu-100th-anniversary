@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
+import { bus } from '../bus';
 
 const props = defineProps<{
     name: string,
@@ -23,6 +24,7 @@ onMounted(() => {
 })
 
 function click(e: Event) {
+    bus.emit('full-page-to', props.id)
 }
 </script>
 <template>
