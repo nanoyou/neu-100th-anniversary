@@ -10,7 +10,7 @@
 </template>
 <style lang="less" scoped>
 .main {
-    background-image: url(img/neu_nanhu_night_scene.png);
+    background-image: url(/img/neu_nanhu_night_scene.png);
     background-size: cover;
 
     height: 100%;
@@ -24,17 +24,17 @@
 
 h1, h2 {
     margin: 0;
-    color: white;
+    color: rgb(247, 247, 247);
 }
 h1 {
     font-size: 100px;
-    text-shadow: 10px 10px 10px #333;
+    text-shadow: 8px 8px 5px #222;
     margin-top: 30px;
 }    
 h2 {
     font-size: 30px;
-    text-shadow: 10px 10px 10px #333;
-    margin-top: 30px;
+    text-shadow: 5px 5px 5px #222;
+    margin-top: 60px;
 }
 .logo {
     width: 450px;
