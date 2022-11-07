@@ -97,6 +97,8 @@ function click(id: number) {
         margin-bottom: 3px;
         
         width: 29px;
+
+        cursor: pointer;
     }
 }
 .button.selected {
