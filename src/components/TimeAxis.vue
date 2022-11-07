@@ -7,7 +7,7 @@ const props = defineProps<{
         detailedYear: string,
         detailedMonth: string,
         title: string,
-        enabled: boolean,
+        enabled?: boolean,
     }[],
 }>()
 
@@ -47,6 +47,10 @@ function click(id: number) {
 
     height: 100vh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &-line {
         position: absolute;
         background-color: rgb(215, 226, 235);
@@ -56,11 +60,8 @@ function click(id: number) {
         transform: translateX(-50%);
     }
     &-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        
-        transform: translateX(-50%);
+        margin-top: 75px;
+
         display: flex;
         flex-direction: column;
         &-selection {
@@ -81,7 +82,7 @@ function click(id: number) {
     justify-content: space-between;
 }
 .detail, .title {
-    width: 115px;
+    width: 120px;
 }
 .button-img {
     width: 35px;
