@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import HistoryCard from '../components/HistoryCard.vue'
+import TimeAxis from '../components/TimeAxis.vue';
 
 const cards = reactive([
     {
@@ -9,9 +10,10 @@ const cards = reactive([
         body: '1922年春，张作霖委派时任奉天省长兼财政厅长王永江筹办东北大学。同年，成立东北大学筹备委员会，原国立沈阳高等师范学校改办为东北大学理工科，原文学专门学校（原奉天法政学堂）改办为东北大学文法科。校长由王永江兼任，学生480余人。文法科设中国文学系、英文学系、俄文学系、法律学系、政治学系；理工科设数学系、物理学系、化学系、土木工学系，机械学系，并成立东北大学筹委会。',
         icon: undefined,
 
-        detailYear: '1922年',
-        detailMonth: '春季',
+        detailedYear: '1922年',
+        detailedMonth: '春季',
 
+        id: 0,
         enabled: false,
     }, {
         year: 1923,
@@ -19,17 +21,28 @@ const cards = reactive([
         body: '1923年4月19日，奉天省公署颁发“东北大学之印”，4月26日正式启用，东北大学宣告成立，时任奉天省省长王永江为首任校长。',
         icon: '/img/neu_stamp.png',
 
-        detailYear: '1923年',
-        detailMonth: '4月',
+        detailedYear: '1923年',
+        detailedMonth: '4月',
 
+        id: 1,
         enabled: true,
     }
 ])
+
+function axisClick(id: number) {
+    cards.forEach(card => {
+        if (card.id == id) {
+            card.enabled = true;
+        } else {
+            card.enabled = false;
+        }
+    })
+}
 </script>
 <template>
     <div id="history">
         <aside>
-            轴
+            <TimeAxis :data="cards" @click="axisClick"/>
         </aside>
         <main>
             <HistoryCard v-for="{year, title, body, icon, enabled} in cards" v-show="enabled" :year="year" :title="title" :body="body" :icon="icon" />
@@ -39,7 +52,7 @@ const cards = reactive([
 <style lang="less" scoped>
 #history {
     height: 100%;
-    background-color: gray;
+    background-color: #EEE;
     
     display: flex;
     align-items: center;
@@ -47,5 +60,9 @@ const cards = reactive([
 }
 aside {
     width: 20vw;
+    margin-right: 10vw;
+}
+main {
+    margin-top: 75px;
 }
 </style>
