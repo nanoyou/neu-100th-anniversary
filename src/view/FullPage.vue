@@ -26,7 +26,7 @@ function moveToPage(index: number) {
 
     setTimeout(() => {
         isScrolling = false
-    }, 800)
+    }, 510)
 }
 function moveToPageWithID(id: string) {
     for (let i = 0; i < sections.value.length; i++) {
