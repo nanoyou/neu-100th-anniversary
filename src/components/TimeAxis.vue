@@ -33,9 +33,9 @@ function click(id: number) {
                     <div class="year">{{item.detailedYear}}</div>
                     <div class="month">{{item.detailedMonth}}</div>
                 </div>
-                <div class="button" :class="selected[item.id]" @click="() => click(item.id)">
+                <img class="button-img" src="/img/time_line_button_activated.svg" v-if="selected[item.id]" @click="() => click(item.id)" />
+                <img class="button-img" src="/img/time_line_button_deactivated.svg" v-if="!selected[item.id]" @click="() => click(item.id)" />
 
-                </div>
                 <div class="title">{{item.title}}</div>
             </div>
         </div>
@@ -83,17 +83,20 @@ function click(id: number) {
 .detail, .title {
     width: 115px;
 }
+.button-img {
+    width: 35px;
+    transform: translate(1px, 2px);
+    margin-left: 10px;
+    margin-right: 10px;
+    &:hover {
 
-.button {
-    border-radius: 50%;
-    background-color: rgb(251, 251, 251);
-    box-shadow: 0 0 0 2px rgb(72, 164, 223);
-
-    height: 20px;
-    width: 20px;
-    margin: 0 20px 0 20px;
-
-    transition: all 0.5s;
+        margin-left: 13px;
+        margin-right: 13px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        
+        width: 29px;
+    }
 }
 .button.selected {
     background-color: rgb(72, 164, 223);
