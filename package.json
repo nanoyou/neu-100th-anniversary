@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "less": "^4.1.3",
     "vue": "^3.2.41"
   },
