@@ -16,16 +16,8 @@ const links = reactive([
         id: "scene",
         selected: false,
     }, {
-        name: "师生风貌",
-        id: "",
-        selected: false,
-    }, {
         name: "科研成果",
-        id: "",
-        selected: false,
-    }, {
-        name: "要闻在线",
-        id: "",
+        id: "science",
         selected: false,
     }
 ])
