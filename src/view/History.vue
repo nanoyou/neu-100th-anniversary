@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from '@vue/reactivity';
 import { reactive, ref } from 'vue';
 import HistoryCard from '../components/HistoryCard.vue'
 import TimeAxis from '../components/TimeAxis.vue';
@@ -53,11 +54,12 @@ const cards = reactive([
         id: 4,
     }
 ])
-
+const backgroundID = ref(0)
 function axisClick(id: number) {
     cards.forEach(card => {
         if (card.id == id) {
             card.enabled = true;
+            backgroundID.value = id
         } else {
             card.enabled = false;
         }
@@ -65,7 +67,7 @@ function axisClick(id: number) {
 }
 </script>
 <template>
-    <div id="history">
+    <div id="history" :class="`bg bg-${backgroundID}`">
         <aside>
             <TimeAxis :data="cards" @click="axisClick"/>
         </aside>
@@ -89,5 +91,40 @@ aside {
 }
 main {
     margin-top: 75px;
+}
+.bg {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-0::before {
+        background-image: url(/img/wangyongjiang.jpeg);
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+    &-1::before {
+        background-image: url(/img/fengtian_gongshu.jpg);
+        opacity: 0.3;
+        filter: blur(4px);
+    }
+    &-2::before {
+        background-image: url(/img/neu_gate.png);
+        opacity: 0.2;
+        filter: blur(1px);
+    }
+    &-3::before {
+        background-image: url(/img/918.jpeg);
+        opacity: 0.15;
+        filter: blur(4px);
+    }
+    &-4::before {
+        background-image: url(/img/129.jpg);
+        opacity: 0.15;
+        filter: blur(2px);
+    }
 }
 </style>
