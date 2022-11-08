@@ -51,6 +51,8 @@ function click(id: number) {
     justify-content: center;
     align-items: center;
 
+    user-select: none;
+
     &-line {
         position: absolute;
         background-color: rgb(215, 226, 235);
