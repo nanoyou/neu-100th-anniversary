@@ -57,7 +57,6 @@ let handle = setInterval(nextImage, 3000)
 </template>
 <style lang="less" scoped>
 .wrap {
-    margin-top: 60px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -106,6 +105,7 @@ img {
     border-radius: 2px;
 
     box-shadow: 5px 5px 8px #111;
+    margin-top: 60px;
 }
 
 .image-wrap {
