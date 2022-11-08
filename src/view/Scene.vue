@@ -22,7 +22,7 @@ onMounted(() => currentImage.value = 0)
 // setTimeout(() => currentImage.value = 1 , 1000)
 function nextImage() {
     let length = currentImage.value + 1
-    if (length > images.length) {
+    if (length >= images.length) {
         length = 0
     }
     currentImage.value = length
@@ -32,9 +32,9 @@ function switchTo(index: number) {
 
     currentImage.value = index
 
-    handle = setInterval(nextImage, 5000)
+    handle = setInterval(nextImage, 3000)
 }
-let handle = setInterval(nextImage, 5000)
+let handle = setInterval(nextImage, 3000)
 
 </script>
 <template>
