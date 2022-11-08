@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Main from './Main.vue'
 import History from './History.vue'
+import Scene from './Scene.vue'
 import { computed, onBeforeMount, onMounted, ref } from 'vue';
 import { bus } from '../bus'
 
@@ -79,6 +80,9 @@ function handler(event: any) {
         </section>
         <section id="section-history">
             <History />
+        </section>
+        <section id="section-scene">
+            <Scene />
         </section>
     </div>
     </div>

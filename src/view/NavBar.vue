@@ -13,7 +13,7 @@ const links = reactive([
         selected: false,
     }, {
         name: "校园风采",
-        id: "",
+        id: "scene",
         selected: false,
     }, {
         name: "师生风貌",
