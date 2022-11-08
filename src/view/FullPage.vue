@@ -4,9 +4,10 @@ import History from './History.vue'
 import Scene from './Scene.vue'
 import { computed, onBeforeMount, onMounted, ref } from 'vue';
 import { bus } from '../bus'
+import Science from './Science.vue';
 
 const fullPage = ref()
-const sections = computed(() => fullPage.value.querySelectorAll('section'))
+const sections = computed(() => fullPage.value.querySelectorAll('#full-page>section'))
 let currentPage = 0
 let isScrolling = false
 onMounted(() => {
@@ -83,6 +84,9 @@ function handler(event: any) {
         </section>
         <section id="section-scene">
             <Scene />
+        </section>
+        <section id="section-science">
+            <Science />
         </section>
     </div>
     </div>
