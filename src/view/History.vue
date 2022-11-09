@@ -19,7 +19,7 @@ const cards = reactive([
         year: 1923,
         title: '东大之印',
         body: '1923年4月19日，奉天省公署颁发“东北大学之印”，4月26日正式启用，东北大学宣告成立，时任奉天省省长王永江为首任校长。',
-        icon: '/img/neu_stamp.png',
+        icon: '/neu-100th-anniversary/img/neu_stamp.png',
 
         detailedYear: '1923年',
         detailedMonth: '4月',
