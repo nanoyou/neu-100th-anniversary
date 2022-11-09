@@ -2,6 +2,7 @@
 import { reactive, ref } from 'vue';
 import Page1 from './SciencePage/Page1.vue';
 import Page2 from './SciencePage/Page2.vue';
+import Page3 from './SciencePage/Page3.vue';
 
 const current = ref(0)
 const pages = reactive([
@@ -11,6 +12,9 @@ const pages = reactive([
     }, {
         id: 1,
         comp: Page2,
+    }, {
+        id: 2,
+        comp: Page3,
     }
 ])
 function next() {
