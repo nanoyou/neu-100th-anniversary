@@ -55,7 +55,7 @@ const props = defineProps<{
     top: 26px;
     left: -59px;
 
-    background-image: url(/img/scene/azure_libbon.svg);
+    background-image: url(/img/science/azure_libbon.svg);
     background-size: cover;
 
     color: white;

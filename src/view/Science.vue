@@ -15,13 +15,17 @@ const pages = reactive([
 
 <div class="wrap">
     <div class="inner">
-        <div class="left">l</div>
+        <div class="left button">
+            <img src="/img/science/left_triangle_button.svg" alt="">
+        </div>
         <div class="main">
             <section v-for="{id, comp} in pages" v-show="id == current">
                 <component :is="comp" />
             </section>
         </div>
-        <div class="right">r</div>
+        <div class="right button">
+            <img src="/img/science/right_triangle_button.svg" alt="">
+        </div>
     </div>
 </div>
 
@@ -42,10 +46,10 @@ const pages = reactive([
     justify-content: center;
 }
 .left {
-    background-color: red;
+    // background-color: red;
 }
 .right {
-    background-color: aqua;
+    // background-color: aqua;
 }
 .left, .right {
     margin: 0 10vw 0 10vw;
@@ -54,5 +58,8 @@ const pages = reactive([
     flex: 1;
     // background-color: yellow;
     // height: 100%;
+}
+.button {
+    width: 100px;
 }
 </style>
