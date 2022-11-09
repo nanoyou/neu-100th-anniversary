@@ -52,6 +52,42 @@ const cards = reactive([
         detailedMonth: '12月',
 
         id: 4,
+    }, {
+        year: 1993,
+        title: '东大复名',
+        body: '1993年3月，国家教委正式批准东北工学院复名为东北大学，学校聘请张学良为东北大学名誉校长。秦皇岛分院随东北大学复名而更名为“东北大学秦皇岛分校”。',
+
+        detailedYear: '1993年',
+        detailedMonth: '3月',
+
+        id: 5,
+    }, {
+        year: 1996,
+        title: '211工程',
+        body: '1996年12月，东北大学进入国家首批“211工程”重点建设行列，秦皇岛分校也随之进入“211工程”行列。翌年1月，原沈阳黄金学院并入东北大学。',
+
+        detailedYear: '1996年',
+        detailedMonth: '12月',
+
+        id: 6
+    }, {
+        year: 1998,
+        title: '985工程',
+        body: '1998年5月，东北大学进入国家首批“985工程”大学行列，并划入教育部直属，秦皇岛分校也同步划入教育部直属。',
+
+        detailedYear: '1998年',
+        detailedMonth: '5月',
+
+        id: 7
+    }, {
+        year: 2022,
+        title: '胜利辉煌',
+        body: '2022年3月，入选教育部公布的首批虚拟教研室建设试点名单。3月，入选教育部基础学科招生改革试点名单（强基计划）。7月18日，东北大学工程结构动力学中心挂牌仪式举行。 9月，成为东北三省一区高校心理健康教育联盟成员。',
+
+        detailedYear: '2022年',
+        detailedMonth: '3月',
+
+        id: 8
     }
 ])
 const backgroundID = ref(0)
@@ -102,29 +138,49 @@ main {
         background-size: cover;
     }
     &-0::before {
-        background-image: url(/img/wangyongjiang.jpeg);
+        background-image: url(/img/history/wangyongjiang.jpeg);
         opacity: 0.2;
         filter: blur(4px);
     }
     &-1::before {
-        background-image: url(/img/fengtian_gongshu.jpg);
+        background-image: url(/img/history/fengtian_gongshu.jpg);
         opacity: 0.3;
         filter: blur(4px);
     }
     &-2::before {
-        background-image: url(/img/neu_gate.png);
+        background-image: url(/img/history/neu_gate.png);
         opacity: 0.2;
         filter: blur(1px);
     }
     &-3::before {
-        background-image: url(/img/918.jpeg);
+        background-image: url(/img/history/918.jpeg);
         opacity: 0.15;
         filter: blur(4px);
     }
     &-4::before {
-        background-image: url(/img/129.jpg);
+        background-image: url(/img/history/129.jpg);
         opacity: 0.15;
         filter: blur(2px);
+    }
+    &-5::before {
+        background-image: url(/img/history/jian_guo_hou_shi.png);
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+    &-6::before {
+        background-image: url(/img/history/211.jpg);
+        opacity: 0.2;
+        filter: blur(3px);
+    }
+    &-7::before {
+        background-image: url(/img/history/985.png);
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+    &-8::before {
+        background-image: url(/img/history/dbdx.jpg);
+        opacity: 0.2;
+        filter: blur(5px);
     }
 }
 </style>
