@@ -39,10 +39,10 @@ const content = [
     align-items: center;
     justify-content: space-between;
 
-    width: 850px;
+    width: 950px;
 }
 .line2 {
-    width: 850px;
+    width: 950px;
 }
 img {
     height: 30vh;

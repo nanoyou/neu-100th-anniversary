@@ -53,6 +53,8 @@ function prev() {
 .wrap {
     width: 100%;
     height: 100%;
+
+    background-color: #FEFEFE;
 }
 .inner {
     width: 100%;
