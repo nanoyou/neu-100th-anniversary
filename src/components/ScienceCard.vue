@@ -37,7 +37,7 @@ const props = defineProps<{
 }
 .title {
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 30px;
 
     font-size: 26px;
 }

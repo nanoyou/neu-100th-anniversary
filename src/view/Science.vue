@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import Page1 from './SciencePage/Page1.vue';
+import Page2 from './SciencePage/Page2.vue';
 
 const current = ref(0)
 const pages = reactive([
     {
         id: 0,
         comp: Page1,
-    },
+    }, {
+        id: 1,
+        comp: Page2,
+    }
 ])
 function next() {
     let nextPage = current.value + 1
@@ -65,9 +69,15 @@ function prev() {
     // background-color: yellow;
     // height: 100%;
 }
+.left {
+    margin-left: 100px;
+}
+.right {
+    margin-right: 100px;
+}
 .button {
-    margin: 0 7vw 0 7vw;
-    width: 100px;
+    // margin: 0 7vw 0 7vw;
+    width: 80px;
     
     cursor: pointer;
 

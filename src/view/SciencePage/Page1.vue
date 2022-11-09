@@ -31,7 +31,7 @@ const content = [
     align-items: center;
     justify-content: center;
 
-    width: 40vw;
+
 }
 .line1 {
     display: flex;
@@ -39,10 +39,10 @@ const content = [
     align-items: center;
     justify-content: space-between;
 
-    width: 88%;
+    width: 850px;
 }
 .line2 {
-    width: 88%;
+    width: 850px;
 }
 img {
     height: 30vh;
