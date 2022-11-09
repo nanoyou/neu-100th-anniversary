@@ -19,7 +19,7 @@ const content = [
         </ScienceCard>
     </div>
     <div class="line2">
-        <ScienceCard class="card" title="东北大学在高熵合金研究方面取得重要进展" :content="content">
+        <ScienceCard class="card" title="东北大学在高熵合金研究方面取得重要进展" time="2022.09.13" :content="content">
         </ScienceCard>
     </div>
 </div>
