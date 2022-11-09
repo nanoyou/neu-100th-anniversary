@@ -48,6 +48,7 @@ const props = defineProps<{
     &-text {
         text-indent: 2em;
         font-size: 19px;
+        line-height: 25px;
     }
 }
 .time {
