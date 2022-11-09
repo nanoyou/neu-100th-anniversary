@@ -45,7 +45,7 @@ h2 {
     left: -38px;
 
     padding: 8px 65px 8px 65px;
-    rotate: -45deg;
+    transform: rotate(-45deg);
     
     color: white;
     font-weight: bold;
