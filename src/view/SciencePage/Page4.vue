@@ -44,6 +44,7 @@ const content = [
     width: 950px;
 }
 img {
+    max-height: 290px;
     height: 30vh;
 }
 .card {
