@@ -4,15 +4,15 @@ import { computed, onMounted, reactive, ref } from 'vue';
 
 const images = reactive([
     {
-        url: '/img/scene/1.jpg',
+        url: '/neu-100th-anniversary/img/scene/1.jpg',
     }, {
-        url: '/img/scene/2.jpg',
+        url: '/neu-100th-anniversary/img/scene/2.jpg',
     }, {
-        url: '/img/scene/3.jpg',
+        url: '/neu-100th-anniversary/img/scene/3.jpg',
     }, {
-        url: '/img/scene/4.jpg',
+        url: '/neu-100th-anniversary/img/scene/4.jpg',
     }, {
-        url: '/img/scene/5.jpg',
+        url: '/neu-100th-anniversary/img/scene/5.jpg',
     }
 ])
 const currentImage = ref(0)
@@ -39,7 +39,7 @@ let handle = setInterval(nextImage, 3000)
 </script>
 <template>
     <div class="wrap">
-        <div class="background" :style="`background-image: url(/neu-100th-anniversary/${images[currentImage].url})`"></div>
+        <div class="background" :style="`background-image: url(${images[currentImage].url})`"></div>
         <div class="frame">
             <div ref="imageBar" class="img" :style="`transform: translateX(-${deltaX}px)`">
                 <div v-for="{url} in images" class="image-wrap">
