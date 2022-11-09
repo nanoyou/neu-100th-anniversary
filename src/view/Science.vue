@@ -9,13 +9,28 @@ const pages = reactive([
         comp: Page1,
     },
 ])
+function next() {
+    let nextPage = current.value + 1
+    if (nextPage == pages.length) {
+        nextPage = 0
+    }
 
+    current.value = nextPage
+}
+function prev() {
+    let prevPage = current.value - 1
+    if (prevPage == -1) {
+        prevPage = pages.length - 1
+    }
+
+    current.value = prevPage
+}
 </script>
 <template>
 
 <div class="wrap">
     <div class="inner">
-        <div class="left button">
+        <div class="left button" @click="prev">
             <img src="/img/science/left_triangle_button.svg" alt="">
         </div>
         <div class="main">
@@ -23,7 +38,7 @@ const pages = reactive([
                 <component :is="comp" />
             </section>
         </div>
-        <div class="right button">
+        <div class="right button" @click="next">
             <img src="/img/science/right_triangle_button.svg" alt="">
         </div>
     </div>
@@ -45,21 +60,19 @@ const pages = reactive([
     align-items: center;
     justify-content: center;
 }
-.left {
-    // background-color: red;
-}
-.right {
-    // background-color: aqua;
-}
-.left, .right {
-    margin: 0 10vw 0 10vw;
-}
 .main {
     flex: 1;
     // background-color: yellow;
     // height: 100%;
 }
 .button {
+    margin: 0 7vw 0 7vw;
     width: 100px;
+    
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(110%);
+    }
 }
 </style>
