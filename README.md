@@ -54,6 +54,10 @@ npm run build
 
 3. 运行 Web 服务器
 
+### 通过 Github Pages 访问
+
+通过 [Github Pages](https://nanoyou.github.io/neu-100th-anniversary/) 可以直接访问已经部署好的网页
+
 ## 图片展示
 
 ![](docs/img/1.png)
