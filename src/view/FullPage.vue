@@ -13,7 +13,29 @@ let isScrolling = false
 onMounted(() => {
     document.body.addEventListener('mousewheel', handler)
     document.body.addEventListener('DOMMouseScroll', handler)
+    
+    document.body.addEventListener('touchstart', handleTouchStart)
+    document.body.addEventListener('touchmove', handleTouchMove)
+    document.body.addEventListener('touchend', handleTouchEnd)
 })
+
+
+let startY = -1
+let deltaY = -1
+function handleTouchStart(event: TouchEvent) {
+    startY = event.touches[0].clientY
+}
+function handleTouchMove(event: TouchEvent) {
+    deltaY = event.touches[0].clientY - startY
+}
+function handleTouchEnd(event: TouchEvent) {
+    startY = -1
+    if (deltaY < 0) {
+        next()
+    } else {
+        prev()
+    }
+}
 
 function moveToPage(index: number) {
     if (isScrolling) {
